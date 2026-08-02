@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tushar Mathur — Portfolio</title>
+<meta name="description" content="Tushar Mathur — UBC Economics &amp; Statistics. Pulse (Canadian SMB cash-flow intelligence), analyst work for ARC, and independent web development.">
+<meta property="og:title" content="Tushar Mathur — Portfolio">
+<meta property="og:description" content="Cash-flow intelligence for Canadian SMBs, market and capital analysis for a pre-launch D2C label, and production websites for small businesses.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f8f7f4; --card:#ffffff; --border:#e5e5e0; --border-strong:#d8d8d2;
+  --ink:#1a1a18; --ink-soft:#52524d; --ink-faint:#8a8a82;
+  --red:#c0392b; --red-soft:#f4e3e0;
+  --green:#2e7d54; --green-soft:#e6f1ea;
+  --blue:#2c5f8a; --blue-soft:#e2ecf4;
+  --gold:#b8860b; --gold-soft:#f6efdc;
+  --serif:'Fraunces',Georgia,serif; --sans:'Inter',-apple-system,sans-serif; --mono:'JetBrains Mono','SF Mono',monospace;
+  --maxw:1040px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.7;font-size:15.5px;-webkit-font-smoothing:antialiased;
+  background-image:radial-gradient(circle at 15% 8%,rgba(192,57,43,0.018),transparent 42%),radial-gradient(circle at 85% 92%,rgba(44,95,138,0.018),transparent 42%);}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+a{color:inherit}
+
+/* ── masthead ── */
+.masthead{padding:60px 0 34px}
+.kicker{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.14em;color:var(--ink-faint)}
+.masthead h1{font-family:var(--serif);font-size:clamp(46px,8vw,82px);font-weight:600;letter-spacing:-0.03em;line-height:0.98;margin-top:20px}
+.masthead h1 .dot{color:var(--red)}
+.masthead .subtitle{font-family:var(--serif);font-size:clamp(18px,2.4vw,24px);font-weight:400;font-style:italic;color:var(--ink-soft);margin-top:20px;max-width:700px;line-height:1.45}
+.masthead .byline{margin-top:26px;font-size:14.5px;color:var(--ink-soft);display:flex;flex-wrap:wrap;gap:6px 22px;align-items:center}
+.masthead .byline a{text-decoration:underline;text-decoration-color:var(--border-strong);text-underline-offset:4px;transition:text-decoration-color .16s}
+.masthead .byline a:hover{text-decoration-color:var(--red)}
+.masthead .byline .sep{color:var(--border-strong)}
+
+/* ── tab nav ── */
+.tabnav{border-top:1px solid var(--border);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:40;background:rgba(248,247,244,.94);backdrop-filter:blur(8px)}
+.tabnav-in{max-width:var(--maxw);margin:0 auto;padding:0 28px;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.tabnav-in::-webkit-scrollbar{display:none}
+.tab-btn{font-family:var(--sans);font-size:13.5px;font-weight:500;padding:14px 16px;background:none;border:none;border-bottom:2px solid transparent;color:var(--ink-faint);cursor:pointer;white-space:nowrap;display:flex;align-items:center;gap:8px;transition:color .16s,border-color .16s}
+.tab-btn .num{font-family:var(--mono);font-size:10.5px;color:var(--border-strong)}
+.tab-btn:hover{color:var(--ink)}
+.tab-btn.on{color:var(--ink);border-bottom-color:var(--red)}
+.tab-btn.on .num{color:var(--red)}
+
+/* ── pages ── */
+.page{display:none;padding:46px 0 90px}
+.page.on{display:block;animation:fade .3s ease}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+.doc-head{margin-bottom:8px}
+.doc-head h2{font-family:var(--serif);font-size:clamp(34px,5vw,52px);font-weight:600;letter-spacing:-0.028em;line-height:1.04;margin-top:14px}
+.doc-head h2 em{font-style:italic;color:var(--red)}
+.doc-head .purpose{font-family:var(--serif);font-size:clamp(17px,2.1vw,21px);font-style:italic;color:var(--ink-soft);margin-top:16px;max-width:640px;line-height:1.5}
+
+.section{padding:40px 0;border-top:1px solid var(--border)}
+.section-title{font-family:var(--serif);font-size:clamp(22px,2.8vw,30px);font-weight:600;letter-spacing:-0.022em;margin-bottom:16px}
+.section-title em{font-style:italic;color:var(--accent,var(--red))}
+h4{font-family:var(--serif);font-size:18px;font-weight:600;margin-bottom:8px}
+p{margin-bottom:14px;color:var(--ink-soft);max-width:660px}
+p:last-child{margin-bottom:0}
+p strong{color:var(--ink);font-weight:600}
+.lead{font-size:16.5px}
+
+/* ── project cards ── */
+.pgrid{display:flex;flex-direction:column;gap:16px}
+.pcard{background:var(--card);border:1px solid var(--border);border-top:4px solid var(--accent);border-radius:12px;padding:30px 32px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;cursor:pointer;text-align:left;width:100%;font:inherit;color:inherit;transition:transform .18s,box-shadow .18s,border-color .18s}
+.pcard:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.05);border-color:var(--border-strong);border-top-color:var(--accent)}
+.pcard .tag{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.09em;color:var(--accent)}
+.pcard .pt{font-family:var(--serif);font-size:29px;font-weight:600;letter-spacing:-0.02em;margin-top:12px}
+.pcard .pd{color:var(--ink-soft);font-size:15px;margin-top:12px;max-width:560px}
+.pcard .arrow{font-family:var(--serif);font-size:26px;color:var(--accent);transition:transform .18s}
+.pcard:hover .arrow{transform:translateX(4px)}
+.pcard .foot{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.07em;color:var(--ink-faint);margin-top:18px}
+@media(max-width:640px){.pcard{grid-template-columns:1fr}.pcard .arrow{display:none}}
+
+/* ── chips ── */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.chip{font-family:var(--mono);font-size:11.5px;border:1px solid var(--border-strong);border-radius:100px;padding:5px 14px;color:var(--ink-soft);background:var(--card)}
+
+/* ── facts ── */
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.fact{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px 22px}
+.fact .fl{font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:0.1em;color:var(--ink-faint);margin-bottom:8px}
+.fact .fv{font-family:var(--serif);font-size:17px;font-weight:600;line-height:1.3}
+.fact .fv small{display:block;font-family:var(--sans);font-size:13px;font-weight:400;color:var(--ink-faint);margin-top:6px;line-height:1.5}
+
+/* ── experience ── */
+.exp{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.exp-row{padding:22px 24px;display:grid;grid-template-columns:1fr 175px;gap:18px;align-items:start;border-bottom:1px solid var(--border)}
+.exp-row:last-child{border-bottom:none}
+@media(max-width:640px){.exp-row{grid-template-columns:1fr;gap:6px}}
+.exp-row .r{font-family:var(--serif);font-size:18px;font-weight:600;letter-spacing:-0.01em}
+.exp-row .r small{display:block;font-family:var(--sans);font-weight:400;color:var(--ink-soft);font-size:14.5px;margin-top:7px;line-height:1.6;letter-spacing:0}
+.exp-row .d{font-family:var(--mono);font-size:11.5px;color:var(--ink-faint);text-align:right;letter-spacing:0.03em;padding-top:5px}
+@media(max-width:640px){.exp-row .d{text-align:left;padding-top:0}}
+
+/* ── link list ── */
+.links{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;max-width:720px}
+.lk{padding:19px 22px;display:flex;align-items:center;gap:18px;text-decoration:none;border-bottom:1px solid var(--border);transition:background .16s}
+.lk:last-child{border-bottom:none}
+.lk:hover{background:#fcfcfa}
+.lk .ic{font-family:var(--mono);font-size:9.5px;letter-spacing:0.08em;color:var(--accent);border:1px solid var(--border-strong);border-radius:5px;padding:4px 8px;flex-shrink:0;width:56px;text-align:center}
+.lk .mn{flex:1;min-width:0}
+.lk .nm{font-family:var(--serif);font-weight:600;font-size:17px;display:block;letter-spacing:-0.01em}
+.lk .sb{font-size:13.5px;color:var(--ink-faint);margin-top:3px;display:block;line-height:1.5}
+.lk .ar{font-family:var(--serif);font-size:17px;color:var(--accent);flex-shrink:0;transition:transform .16s}
+.lk:hover .ar{transform:translateX(3px)}
+
+/* ── stats ── */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px}
+.stat{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px}
+.stat .big{font-family:var(--serif);font-size:38px;font-weight:600;line-height:1;color:var(--accent);letter-spacing:-0.02em}
+.stat .lbl{font-size:13.5px;color:var(--ink-soft);margin-top:11px;line-height:1.5}
+
+/* ── quadrant ── */
+.quad{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+@media(max-width:700px){.quad{grid-template-columns:repeat(2,1fr)}}
+.q{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px}
+.q.on{background:var(--blue);border-color:var(--blue)}
+.q .qn{font-family:var(--mono);font-size:10.5px;color:var(--ink-faint);margin-bottom:12px}
+.q .qt{font-family:var(--serif);font-size:17px;font-weight:600;line-height:1.2;letter-spacing:-0.015em}
+.q .qs{font-family:var(--mono);font-size:10.5px;color:var(--ink-faint);margin-top:10px}
+.q.on .qn,.q.on .qt,.q.on .qs{color:#fff}
+.q.on .qn,.q.on .qs{opacity:.82}
+
+/* ── table ── */
+.tbl-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:14.5px;background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+th{font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:0.09em;color:var(--ink-faint);text-align:left;padding:13px 18px;border-bottom:1px solid var(--border);font-weight:400;white-space:nowrap}
+th.r{text-align:right}
+td{padding:13px 18px;border-bottom:1px solid var(--border);color:var(--ink-soft)}
+td.num{font-family:var(--mono);text-align:right;color:var(--ink);white-space:nowrap}
+tr.total td{color:var(--ink);font-weight:600;border-bottom:none}
+tr.total td.num{color:var(--blue)}
+
+/* ── cashflow ── */
+.flow{display:flex;flex-direction:column;gap:12px;max-width:660px}
+.fl{display:grid;grid-template-columns:82px 1fr 104px;align-items:center;gap:16px}
+.fl .m{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.07em;color:var(--ink-faint)}
+.fl .bar{height:26px;border-radius:5px;background:var(--blue);opacity:.9}
+.fl .v{font-family:var(--mono);font-size:13px;text-align:right}
+
+/* ── timeline ── */
+.tl{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.trow{padding:17px 22px;display:grid;grid-template-columns:110px 1fr;gap:18px;align-items:baseline;border-bottom:1px solid var(--border)}
+.trow:last-child{border-bottom:none}
+@media(max-width:600px){.trow{grid-template-columns:1fr;gap:5px}}
+.trow .w{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--blue)}
+.trow .t{font-size:14.5px;color:var(--ink-soft)}
+.trow .t b{color:var(--ink);font-weight:600}
+
+/* ── grids / callout ── */
+.grid{display:grid;gap:16px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(245px,1fr))}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px}
+.card p{font-size:14px;margin:0}
+.callout{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:20px 24px;font-size:14.5px;color:var(--ink-soft);max-width:680px}
+.callout p{margin:0}
+
+footer{border-top:1px solid var(--border);padding:32px 0 64px;font-family:var(--mono);font-size:11.5px;color:var(--ink-faint);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+#overview{--accent:var(--red)} #pulse{--accent:var(--red)} #arc{--accent:var(--blue)} #web{--accent:var(--green)}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:4px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">Vancouver, BC · UBC Economics &amp; Statistics</div>
+    <h1>Tushar Mathur<span class="dot">.</span></h1>
+    <p class="subtitle">Cash-flow intelligence, brand &amp; product analysis, and things I've built along the way.</p>
+    <div class="byline">
+      <a href="mailto:tusharmathur32@gmail.com">tusharmathur32@gmail.com</a>
+      <span class="sep">·</span>
+      <a href="tel:+16476541262">+1 (647) 654-1262</a>
+      <span class="sep">·</span>
+      <a href="https://www.linkedin.com/in/tushar-mathur-77a337274" target="_blank" rel="noopener">LinkedIn</a>
+      <span class="sep">·</span>
+      <a href="https://github.com/tusharmathur07" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</header>
+
+<nav class="tabnav" role="tablist">
+  <div class="tabnav-in">
+    <button class="tab-btn on" data-p="overview" role="tab"><span class="num">00</span>Overview</button>
+    <button class="tab-btn" data-p="pulse" role="tab"><span class="num">01</span>Pulse</button>
+    <button class="tab-btn" data-p="arc" role="tab"><span class="num">02</span>ARC</button>
+    <button class="tab-btn" data-p="web" role="tab"><span class="num">03</span>Web Development</button>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<!-- ══════════ OVERVIEW ══════════ -->
+<div class="page on" id="overview" role="tabpanel">
+
+  <div class="doc-head">
+    <div class="kicker">About</div>
+    <h2>Financial systems, and the <em>analysis behind them</em></h2>
+    <p class="purpose">A second-year Economics &amp; Statistics student at UBC, working at the point where financial analysis meets building things.</p>
+  </div>
+
+  <div class="section">
+    <p class="lead">I've modelled cost structures and pricing for a pre-launch consumer brand, supported valuation and fundraising work at an investment bank, and spent the last several months designing and building <strong>Pulse</strong> — a cash-flow intelligence platform for Canadian small businesses, taken from market research through a verified Python math engine to a working prototype.</p>
+    <p>The common thread is that I'd rather derive a number than assert one. Pulse exists because most financial software records what already happened; the harder and more useful problem is telling an owner what is about to happen, and being right about it.</p>
+
+    <div class="facts" style="margin-top:26px">
+      <div class="fact">
+        <div class="fl">Education</div>
+        <div class="fv">University of British Columbia<small>B.A. Combined Major, Economics &amp; Statistics · May 2028</small></div>
+      </div>
+      <div class="fact">
+        <div class="fl">Focus</div>
+        <div class="fv">Fintech &amp; product<small>Financial modelling, market analysis, applied statistics</small></div>
+      </div>
+      <div class="fact">
+        <div class="fl">Based in</div>
+        <div class="fv">Vancouver, BC<small>Open to internships and part-time work</small></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3 class="section-title">Experience</h3>
+    <div class="exp">
+      <div class="exp-row">
+        <div class="r">Pulse — Founder<small>Designing and building a proactive cash-flow intelligence platform for Canadian SMBs: a 15-metric financial framework, a deterministic Python math engine, and a working prototype.</small></div>
+        <div class="d">Feb 2026 — Present</div>
+      </div>
+      <div class="exp-row">
+        <div class="r">ARC — Business &amp; Product Analyst<small>Financial models and cost structures for a ~$30K+ CAD pre-launch investment; pricing and margin analysis across 10+ premium D2C brands; three investor pitch decks.</small></div>
+        <div class="d">Feb 2025 — Jan 2026</div>
+      </div>
+      <div class="exp-row">
+        <div class="r">FirstLease India — Business Development Intern<small>Partner outreach securing 2 new clients and 6 strategic partners; standardised the Excel tracking system for active clients and investor leads.</small></div>
+        <div class="d">Jun — Sep 2025</div>
+      </div>
+      <div class="exp-row">
+        <div class="r">BMA Capital — Investment Banking Intern<small>Researched 10+ portfolio companies for revenue trends and burn rates; organised company information into investor-facing materials supporting a successful capital raise.</small></div>
+        <div class="d">Jun — Aug 2023</div>
+      </div>
+    </div>
+
+    <div style="margin-top:28px">
+      <h4>Skills</h4>
+      <div class="chips" style="margin-top:6px">
+        <span class="chip">Financial modelling</span>
+        <span class="chip">Unit economics · CAC/LTV</span>
+        <span class="chip">Cash-flow forecasting</span>
+        <span class="chip">Market research</span>
+        <span class="chip">Investor pitch decks</span>
+        <span class="chip">Python</span>
+        <span class="chip">R</span>
+        <span class="chip">SQL / PostgreSQL</span>
+        <span class="chip">Git / GitHub</span>
+        <span class="chip">Salesforce CRM</span>
+        <span class="chip">Figma</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3 class="section-title">Selected work</h3>
+    <div class="pgrid">
+
+      <button class="pcard" data-goto="pulse" style="--accent:var(--red)">
+        <div>
+          <div class="tag">Fintech · Solo founder · Feb 2026–Present</div>
+          <div class="pt">Pulse</div>
+          <div class="pd">A cash-flow intelligence platform for Canadian SMBs — proactive SMS/email alerts ahead of cash shortfalls, payroll risk, and GST/HST gaps, no login required. Full pre-build specification, a verified deterministic math engine, and a working interactive prototype.</div>
+          <div class="chips">
+            <span class="chip">15 metrics</span>
+            <span class="chip">122 assertions passing</span>
+            <span class="chip">2,100+ stress scenarios</span>
+            <span class="chip">~200pp specification</span>
+          </div>
+          <div class="foot">Showcase + math engine + working prototype →</div>
+        </div>
+        <div class="arrow">→</div>
+      </button>
+
+      <button class="pcard" data-goto="arc" style="--accent:var(--blue)">
+        <div>
+          <div class="tag">Brand &amp; product strategy · Analyst · Feb 2025–Jan 2026</div>
+          <div class="pt">ARC</div>
+          <div class="pd">Analyst work for a pre-launch D2C label entering India's ₹86,000 Cr innerwear category — pricing and margin benchmarking that located the positioning gap, then the ₹20.9L capital model and 16-week launch schedule built on it.</div>
+          <div class="chips">
+            <span class="chip">₹20.9L capital plan</span>
+            <span class="chip">16-week launch timeline</span>
+            <span class="chip">10+ brands benchmarked</span>
+          </div>
+          <div class="foot">Brand strategy + cost sheet + Gantt chart →</div>
+        </div>
+        <div class="arrow">→</div>
+      </button>
+
+      <button class="pcard" data-goto="web" style="--accent:var(--green)">
+        <div>
+          <div class="tag">Independent client work · Apr 2026–Present</div>
+          <div class="pt">Web Development</div>
+          <div class="pd">Production websites for small businesses near UBC campus — designed, built, and deployed with custom domains, SEO schema, and accessibility-compliant markup.</div>
+          <div class="chips">
+            <span class="chip">Custom domains</span>
+            <span class="chip">SEO schema</span>
+            <span class="chip">Accessibility-compliant</span>
+          </div>
+          <div class="foot">Two live client sites →</div>
+        </div>
+        <div class="arrow">→</div>
+      </button>
+
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ PULSE ══════════ -->
+<div class="page" id="pulse" role="tabpanel">
+  <div class="doc-head">
+    <div class="kicker">01 · Fintech · Solo founder · Feb 2026 — Present</div>
+    <h2>Pulse</h2>
+    <p class="purpose">Most owners find out about a cash shortfall the week it happens. Pulse is built to tell them two weeks earlier — by text, with the date, the amount, and what to do about it.</p>
+  </div>
+
+  <div class="section">
+    <h3 class="section-title">Open the work</h3>
+    <div class="links">
+      <a class="lk" href="https://tusharmathur07.github.io/pulse-showcase/" target="_blank" rel="noopener">
+        <span class="ic">SITE</span>
+        <span class="mn"><span class="nm">Showcase — the full body of work</span><span class="sb">Ten documents: problem, market research, database schema, metric derivations, verified case study</span></span>
+        <span class="ar">↗</span>
+      </a>
+      <a class="lk" href="https://tusharmathur07.github.io/pulse_prototype/" target="_blank" rel="noopener">
+        <span class="ic">DEMO</span>
+        <span class="mn"><span class="nm">Working prototype</span><span class="sb">Enter a business, run all 15 metrics, see the alert that would be sent</span></span>
+        <span class="ar">↗</span>
+      </a>
+      <a class="lk" href="https://github.com/tusharmathur07/pulse_mathvalidator" target="_blank" rel="noopener">
+        <span class="ic">CODE</span>
+        <span class="mn"><span class="nm">Math engine — source</span><span class="sb">github.com/tusharmathur07/pulse_mathvalidator</span></span>
+        <span class="ar">↗</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3 class="section-title">What it does</h3>
+    <p>Pulse connects to a business's bank, accounting, and payroll data and monitors it continuously. When a cash gap, payroll risk, or GST/HST reserve shortfall appears in the forecast, the owner gets a plain-English SMS or email — no dashboard to open, no login required.</p>
+    <p>Underneath it are fifteen financial metrics derived from first principles: Monte Carlo cash-gap simulation, z-score anomaly detection tuned to each business's own history, payroll normalization, and Canadian GST/HST reserve estimation.</p>
+
+    <div class="stats" style="margin-top:26px">
+      <div class="stat"><div class="big">15</div><div class="lbl">Financial metrics, derived from first principles</div></div>
+      <div class="stat"><div class="big">122</div><div class="lbl">Assertions passing across four client profiles</div></div>
+      <div class="stat"><div class="big">2,100+</div><div class="lbl">Adversarial stress-test scenarios</div></div>
+      <div class="stat"><div class="big">~200pp</div><div class="lbl">Specification written before production code</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3 class="section-title">The rule the architecture is <em>built on</em></h3>
+    <p><strong>The language model never touches a number.</strong> Every dollar figure is computed by deterministic Python before the model sees it; the model receives verified figures and writes sentences from them. A fail-closed output gate then checks every figure in the outgoing message against the engine's own output, and blocks anything that doesn't match.</p>
+    <p>That constraint is why the rest of the work exists — property-based testing with Hypothesis, which surfaced three real bugs the hand-written assertions missed; a seven-phase adversarial stress campaign; and a math engine tested independently of the product it feeds.</p>
+
+    <div class="grid g2" style="margin-top:26px">
+      <div class="card"><h4>Deterministic math</h4><p>Pure Python computes every figure. No AI anywhere in the calculation path.</p></div>
+      <div class="card"><h4>Fail-closed gate</h4><p>Every number in an alert is verified against source data before delivery, or the alert doesn't send.</p></div>
+      <div class="card"><h4>Push-first</h4><p>Value arrives by SMS or email. A customer who never opens an app still gets the whole product.</p></div>
+      <div class="card"><h4>Canadian-first</h4><p>GST/HST reserves, CRA payroll rates, and data residency in Canada from day one.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ ARC ══════════ -->
+<div class="page" id="arc" role="tabpanel">
+  <div class="doc-head">
+    <div class="kicker">02 · Business &amp; Product Analyst at ARC · Feb 2025 — Jan 2026</div>
+    <h2>ARC</h2>
+    <p class="purpose">ARC is a pre-launch D2C label entering India's ₹86,000 Cr innerwear category. I worked as their business and product analyst; the documents below are the deliverables I produced for them.</p>
+  </div>
+
+  <div class="section">
+    <h3 class="section-title">The deliverables</h3>
+    <div class="links">
+      <a class="lk" href="docs/ARC_Brand_Strategy.pdf" target="_blank" rel="noopener">
+        <span class="ic">PDF</span>
+        <span class="mn"><span class="nm">Brand strategy</span><span class="sb">Market tension, positioning, core beliefs, and messaging architecture — the agency engagement I coordinated for ARC</span></span>
+        <span class="ar">↗</span>
+      </a>
+      <a class="lk" href="docs/ARC_Cost_Sheet_Cash_Flow.pdf" target="_blank" rel="noopener">
+        <span class="ic">PDF</span>
+        <span class="mn"><span class="nm">Cost sheet &amp; cash flow</span><span class="sb">₹20.9L pre-launch investment, costed by line and sequenced month by month</span></span>
+        <span class="ar">↗</span>
+      </a>
+      <a class="lk" href="docs/ARC_Gantt_Chart.xlsx" target="_blank" rel="noopener">
+        <span class="ic">XLSX</span>
+        <span class="mn"><span class="nm">Launch Gantt chart</span><span class="sb">16 weeks, four workstreams, vendor ownership per task</span></span>
+        <span class="ar">↗</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3 class="section-title">The gap: a category growing fast, <em>standing still</em></h3>
+    <p>India's innerwear market is large and compounding, but structurally frozen. Mass brands win on affordability. D2C brands win on comfort language that has become indistinguishable from brand to brand. International brands charge for heritage rather than construction. Every player has settled below an inherited ₹999 price ceiling that has nothing to do with what the product costs to build.</p>
+    <p>I benchmarked pricing and margin structure across 10+ premium D2C brands to establish the shape of that gap for ARC: <strong>high price and high differentiation was an empty quadrant</strong> — not for lack of demand, but because no domestic brand had priced with conviction and then justified it with the product. That finding became the basis for the positioning ARC took to market.</p>
+
+    <div class="stats" style="margin-top:26px">
+      <div class="stat"><div class="big">₹86,000 Cr</div><div class="lbl">Category size</div></div>
+      <div class="stat"><div class="big">9.3%</div><div class="lbl">Annual growth rate</div></div>
+      <div class="stat"><div class="big">₹999</div><div class="lbl">Inherited price ceiling</div></div>
+      <div class="stat"><div class="big">10+</div><div class="lbl">Brands benchmarked on price &amp; margin</div></div>
+    </div>
+
+    <div class="quad" style="margin-top:16px">
+      <div class="q"><div class="qn">01</div><div class="qt">Sell value</div><div class="qs">Mass brands</div></div>
+      <div class="q"><div class="qn">02</div><div class="qt">Sell comfort</div><div class="qs">D2C mid-premium</div></div>
+      <div class="q"><div class="qn">03</div><div class="qt">Sell logos</div><div class="qs">International</div></div>
+      <div class="q on"><div class="qn">04</div><div class="qt">Sell standard</div><div class="qs">ARC</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3 class="section-title">Turning the finding into a <em>brand system</em></h3>
+    <p>The positioning work became the brief for ARC's brand identity, and I coordinated that engagement with <strong>SimplePlan Media</strong> on ARC's behalf — briefing the agency from the market analysis, managing the two delivery milestones, and reviewing each round against the position it had to hold: no logo dependence, no comfort clichés, and no deference to the ₹999 ceiling.</p>
+    <p>The resulting system is deliberately restrictive. It rules out <strong>discount-led growth, trend-chasing, and imitation aesthetics</strong> — three growth levers given up so the price stays defensible.</p>
+
+    <div class="grid g2" style="margin-top:26px">
+      <div class="card"><h4>Substance over surface</h4><p>Fabric choice, proportion, and tension define the garment before visual appeal does.</p></div>
+      <div class="card"><h4>Foundation first</h4><p>The most important layer is the one no one sees. Standards are built from the inside out.</p></div>
+      <div class="card"><h4>Long-term over hype</h4><p>Every decision, from fabric sourcing to pricing, is evaluated for durability over short-term traction.</p></div>
+      <div class="card"><h4>Price with conviction</h4><p>Price reflects build, not geography. Confidence in pricing reinforces confidence in identity.</p></div>
+    </div>
+
+    <div class="callout" style="margin-top:26px">
+      <p>Brand identity execution — logo, typography, packaging and brand bible — was produced by SimplePlan Media. My role was client-side: the market and pricing analysis that defined the position, the brief the agency worked to, and the capital and timeline planning that made ARC's launch executable.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3 class="section-title">₹20.9L to launch, <em>costed line by line</em></h3>
+    <p>A pre-launch investment model covering every rupee ARC needed to go from positioning to a live store with inventory on hand — built as a funding document: what had already been deployed, what remained to be raised, and exactly when each rupee leaves the account.</p>
+
+    <div class="tbl-wrap" style="margin-top:26px">
+      <table>
+        <thead><tr><th>Category</th><th class="r">Amount</th><th class="r">Share</th></tr></thead>
+        <tbody>
+          <tr><td>Agencies — brand identity, Shopify build, theme &amp; apps</td><td class="num">₹9,66,711</td><td class="num">46%</td></tr>
+          <tr><td>Sampling &amp; production — fabric, cut &amp; sew, packaging, 20% buffer</td><td class="num">₹6,13,992</td><td class="num">29%</td></tr>
+          <tr><td>Content — four shoots: e-commerce, product, two lifestyle</td><td class="num">₹4,00,000</td><td class="num">19%</td></tr>
+          <tr><td>Travel &amp; operations — two Tirupur trips, trademark, CA retainer</td><td class="num">₹1,10,000</td><td class="num">5%</td></tr>
+          <tr class="total"><td>Total pre-launch investment</td><td class="num">₹20,90,703</td><td class="num">100%</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="stats" style="margin-top:16px">
+      <div class="stat" style="--accent:var(--blue)"><div class="big">₹2,41,660</div><div class="lbl">Already deployed — sampling assets in hand</div></div>
+      <div class="stat" style="--accent:var(--blue)"><div class="big">₹18,49,043</div><div class="lbl">Additional funding required, Feb–May</div></div>
+      <div class="stat" style="--accent:var(--blue)"><div class="big">20%</div><div class="lbl">Buffer held to the final month as contingency</div></div>
+    </div>
+
+    <h4 style="margin-top:36px">Monthly cash flow</h4>
+    <p style="margin-bottom:20px">Sequenced so agency milestones, fabric orders, and shoot costs land against the schedule they unblock.</p>
+    <div class="flow">
+      <div class="fl"><span class="m">February</span><span class="bar" style="width:100%"></span><span class="v">₹6,31,005</span></div>
+      <div class="fl"><span class="m">March</span><span class="bar" style="width:73%"></span><span class="v">₹4,61,005</span></div>
+      <div class="fl"><span class="m">April</span><span class="bar" style="width:89%"></span><span class="v">₹5,64,701</span></div>
+      <div class="fl"><span class="m">May</span><span class="bar" style="width:30%"></span><span class="v">₹1,92,332</span></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3 class="section-title">Sixteen weeks, <em>four vendors, one launch date</em></h3>
+    <p>A week-by-week Gantt coordinating four workstreams that each gate the next: the brand system has to land before the website can be designed, fabric has to arrive before cutting starts, and product has to exist before it can be shot.</p>
+
+    <div class="tl" style="margin-top:26px">
+      <div class="trow"><span class="w">Feb · W1–4</span><span class="t"><b>Brand strategy, logo, art direction</b> — fabric ordered from the mill, first Tirupur trip for factory setup, trademark filed, e-commerce shoot</span></div>
+      <div class="trow"><span class="w">Mar · W5–8</span><span class="t"><b>Typography, packaging, brand bible</b> — website wireframes and design, elastic order for colour matching, production starts</span></div>
+      <div class="trow"><span class="w">Apr · W9–13</span><span class="t"><b>Website development and handover</b> — stitching, second Tirupur trip for QC and pickup, product and two lifestyle shoots, packaging and labels</span></div>
+      <div class="trow"><span class="w">May · W14–16</span><span class="t"><b>Testing, content upload, website live</b> — final production balance, post-production, inventory ready, soft launch</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ WEB ══════════ -->
+<div class="page" id="web" role="tabpanel">
+  <div class="doc-head">
+    <div class="kicker">03 · Independent client work · Apr 2026 — Present</div>
+    <h2>Web Development</h2>
+    <p class="purpose">Production websites for small businesses near UBC campus — designed, built, deployed, and in daily use by the business.</p>
+  </div>
+
+  <div class="section">
+    <h3 class="section-title">Live sites</h3>
+    <div class="links">
+      <a class="lk" href="https://tusharmathur07.github.io/onlyucafeubc/" target="_blank" rel="noopener">
+        <span class="ic">SITE</span>
+        <span class="mn"><span class="nm">Only U Cafe</span><span class="sb">Cafe near UBC campus — menu, hours, location</span></span>
+        <span class="ar">↗</span>
+      </a>
+      <a class="lk" href="https://tusharmathur07.github.io/dollar-n-plus/" target="_blank" rel="noopener">
+        <span class="ic">SITE</span>
+        <span class="mn"><span class="nm">Dollar N Plus</span><span class="sb">Neighbourhood retail store</span></span>
+        <span class="ar">↗</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3 class="section-title">How they're built</h3>
+    <p>Each site is built for a business that needs to be found and understood quickly — not as a portfolio piece. Custom domains, structured SEO data so the business surfaces correctly in local search, and accessibility-compliant markup throughout. Deployed on GitHub Pages so there's no hosting cost for the owner to maintain.</p>
+    <div class="chips" style="margin-top:20px">
+      <span class="chip">Custom domains</span>
+      <span class="chip">SEO schema</span>
+      <span class="chip">Accessibility-compliant</span>
+      <span class="chip">Mobile-first</span>
+      <span class="chip">GitHub Pages</span>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <span>Tushar Mathur · 2026</span>
+  <span>Vancouver, BC</span>
+</footer>
+
+</main>
+
+<script>
+(function(){
+  var tabs = document.querySelectorAll('.tab-btn');
+  var pages = document.querySelectorAll('.page');
+
+  function show(id, push){
+    if(!document.getElementById(id)) id = 'overview';
+    pages.forEach(function(p){ p.classList.toggle('on', p.id===id); });
+    tabs.forEach(function(t){
+      var on = t.dataset.p===id;
+      t.classList.toggle('on', on);
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+    if(push && location.hash.slice(1)!==id) history.pushState(null,'','#'+id);
+    window.scrollTo(0,0);
+  }
+
+  tabs.forEach(function(t){ t.addEventListener('click', function(){ show(t.dataset.p, true); }); });
+  document.querySelectorAll('[data-goto]').forEach(function(b){
+    b.addEventListener('click', function(){ show(b.dataset.goto, true); });
+  });
+  window.addEventListener('popstate', function(){ show(location.hash.slice(1)||'overview', false); });
+
+  show(location.hash.slice(1)||'overview', false);
+})();
+</script>
+</body>
+</html>
